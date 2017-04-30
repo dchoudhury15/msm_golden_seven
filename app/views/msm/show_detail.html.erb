@@ -1,0 +1,28 @@
+<h1> Director <%=@d.id %> </h1>
+<div>
+  Name = <%=@d.name %>
+</div>
+<div>
+  Bio = <%=@d.bio %>
+</div>
+<div>
+  date of Birth = <%=@d.dob %>
+</div>
+<div>
+<img src="<%=@d.image_url %>">
+</div>
+<p>
+  <%= time_ago_in_words(@d.updated_at) %> ago
+</p>
+
+<a href="/directors">
+  Go Back
+</a>
+
+<a href="/directors/<%= @d.id %>/edit">
+  Edit
+</a>
+
+<a href="/delete_director/<%= @d.id %>">
+  Delete
+</a>
